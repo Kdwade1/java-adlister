@@ -33,7 +33,7 @@
     <button type="submit">Submit</button>
     <c:if test="${(param.username != null) && (param.password != null)}">
         <c:choose>
-            <c:when test='${(param.username.equals("admin")) && (param.password.equals("password"))}'>
+            <c:when test='${param.username.equals("admin") && param.password.equals("password")}'>
                 <%response.sendRedirect("/profile.jsp");%>
             </c:when>
 <c:otherwise>
